@@ -46,7 +46,7 @@ if (yearEl) {
 }
 
 // ---- Pre-order form: build a prefilled WhatsApp message ----
-const WHATSAPP_NUMBER = '59160168'; // TODO: replace with full international number, e.g. 855XXXXXXXX
+const WHATSAPP_NUMBER = '23059160168'; // Mauritius (+230) 5916 0168
 
 const preorderForm = document.getElementById('preorderForm');
 const formNote = document.getElementById('formNote');

@@ -30,10 +30,10 @@ KUMO/
 - Respects `prefers-reduced-motion` — animations are disabled for users who have that OS setting on.
 - Fully responsive, mobile-first, with a hamburger nav on small screens.
 
-## ⚠️ Before you deploy — 1 thing to double-check
+## Contact links
 
-**WhatsApp number.** The site currently links to `https://wa.me/59160168`, built from the digits you gave me (`5916 0168`). The `wa.me` deep link requires the **full international number with country code** (no `+`, no spaces) to work correctly on all devices. If that's not already a full international number, update it in two places:
-   - [index.html](index.html): search for `wa.me/59160168` (2 occurrences — Contact section and footer icon).
+WhatsApp is wired to `https://wa.me/23059160168` — Mauritius country code (`+230`) plus the local number `5916 0168`. If the number ever changes, update it in two places:
+   - [index.html](index.html): search for `wa.me/23059160168` (2 occurrences — Contact section and footer icon).
    - [js/script.js](js/script.js): the `WHATSAPP_NUMBER` constant near the top, used by the pre-order form.
 
 Facebook (`facebook.com/kumo.mru`) and Instagram (`instagram.com/kumo_mu`) links are already wired up in the Contact section and footer.
