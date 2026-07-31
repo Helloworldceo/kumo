@@ -39,6 +39,40 @@ if ('IntersectionObserver' in window) {
   fadeSections.forEach((section) => section.classList.add('is-visible'));
 }
 
+// ---- Floating event pop-up ----
+const eventPopup = document.getElementById('eventPopup');
+const eventPopupClose = document.getElementById('eventPopupClose');
+const EVENT_POPUP_DISMISSED_KEY = 'kumo-event-popup-dismissed';
+
+if (eventPopup && eventPopupClose) {
+  const alreadyDismissed = localStorage.getItem(EVENT_POPUP_DISMISSED_KEY) === 'true';
+
+  if (!alreadyDismissed) {
+    setTimeout(() => eventPopup.classList.remove('hidden'), 1500);
+  }
+
+  eventPopupClose.addEventListener('click', () => {
+    eventPopup.classList.add('hidden');
+    localStorage.setItem(EVENT_POPUP_DISMISSED_KEY, 'true');
+  });
+
+  // Dismiss once the visitor reaches the Events section itself
+  const eventsSection = document.getElementById('events');
+  if (eventsSection && 'IntersectionObserver' in window) {
+    const popupObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            eventPopup.classList.add('hidden');
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    popupObserver.observe(eventsSection);
+  }
+}
+
 // ---- Footer year ----
 const yearEl = document.getElementById('year');
 if (yearEl) {
