@@ -13,7 +13,7 @@ KUMO/
 │   └── style.css        # Custom keyframe animations (floating clouds, bounce, fade-in, hover lift)
 ├── js/
 │   └── script.js         # Mobile nav toggle, scroll fade-in, WhatsApp pre-order form logic
-├── assets/                # (empty) place any future images/logos here
+├── assets/                # favicon + generated decorative cookie cutouts
 └── README.md
 ```
 
@@ -37,6 +37,14 @@ WhatsApp is wired to `https://wa.me/23059160168` — Mauritius country code (`+2
    - [js/script.js](js/script.js): the `WHATSAPP_NUMBER` constant near the top, used by the pre-order form.
 
 Facebook (`facebook.com/kumo.mru`) and Instagram (`instagram.com/kumo_mu`) links are already wired up in the Contact section and footer.
+
+## Time-sensitive content
+
+The **Events** section (`<section id="events">` in [index.html](index.html)) promotes a specific pop-up: Fri Jul 31 - Sun Aug 2 at Bakers' Market, Riche Terre Mall. Update the dates/location for the next event, or remove the section entirely, once that weekend has passed — otherwise the site will advertise an outdated event.
+
+## After deploying to Vercel/Netlify
+
+Add an `og:url` meta tag in the `<head>` of [index.html](index.html) pointing at your live domain (e.g. `<meta property="og:url" content="https://your-domain.com" />`). It's omitted for now since the domain isn't known until you deploy — without it, link previews (WhatsApp, Facebook, etc.) still work but won't canonicalize to your real URL.
 
 ## Customization
 
