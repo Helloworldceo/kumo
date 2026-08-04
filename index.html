@@ -83,6 +83,7 @@
         <li><a href="#menu" class="hover:text-sage-600 transition-colors">Menu</a></li>
         <li><a href="#about" class="hover:text-sage-600 transition-colors">About</a></li>
         <li><a href="#events" class="hover:text-sage-600 transition-colors">Events</a></li>
+        <li><a href="#gallery" class="hover:text-sage-600 transition-colors">Gallery</a></li>
         <li><a href="#contact" class="hover:text-sage-600 transition-colors">Contact</a></li>
         <li><a href="#preorder" class="btn-bounce inline-block bg-sage-500 hover:bg-sage-600 text-white px-5 py-2 rounded-full shadow-sm transition-colors">Pre-Order</a></li>
       </ul>
@@ -96,6 +97,7 @@
         <li><a href="#menu" class="mobile-link block hover:text-sage-600">Menu</a></li>
         <li><a href="#about" class="mobile-link block hover:text-sage-600">About</a></li>
         <li><a href="#events" class="mobile-link block hover:text-sage-600">Events</a></li>
+        <li><a href="#gallery" class="mobile-link block hover:text-sage-600">Gallery</a></li>
         <li><a href="#contact" class="mobile-link block hover:text-sage-600">Contact</a></li>
         <li><a href="#preorder" class="mobile-link block bg-sage-500 text-white text-center px-5 py-2 rounded-full">Pre-Order</a></li>
       </ul>
@@ -336,6 +338,48 @@
       </svg>
     </div>
   </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery" class="fade-section py-24 px-5 sm:px-8 bg-cream">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-sage-600 font-semibold tracking-widest text-xs uppercase mb-2">From Our Kitchen</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-brown-700">Gallery</h2>
+      </div>
+
+      <div class="columns-2 sm:columns-3 gap-4 space-y-4">
+        <img data-lightbox src="assets/gallery/gallery-1.jpg" alt="Almond madeleine pouches laid out on the KUMO market table"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+        <img data-lightbox src="assets/gallery/gallery-2.jpg" alt="A box of KUMO brownies lined with floral paper"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+        <img data-lightbox src="assets/gallery/gallery-3.jpg" alt="KUMO-stamped kraft pouches of cookies and madeleines"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+        <img data-lightbox src="assets/gallery/gallery-4.jpg" alt="A sliced pandan chiffon cake"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+        <img data-lightbox src="assets/gallery/gallery-5.jpg" alt="The KUMO stall set up at a pop-up market"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+        <img data-lightbox src="assets/gallery/gallery-6.jpg" alt="Close-up of freshly sliced chocolate brownie squares"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+        <img data-lightbox src="assets/gallery/gallery-7.jpg" alt="Glossy-topped brownies in paper liners"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+        <img data-lightbox src="assets/gallery/gallery-8.jpg" alt="Cookies fresh out of the oven, and a KUMO pouch — goodies in the making"
+             loading="lazy" class="gallery-img w-full rounded-2xl shadow-sm cursor-zoom-in" />
+      </div>
+    </div>
+
+    <!-- Wavy divider between Gallery and Contact -->
+    <div class="mt-20 -mb-20">
+      <svg class="w-full h-10 sm:h-14" viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 30C180 5 360 55 540 30C720 5 900 55 1080 30C1260 5 1350 20 1440 30" stroke="#E3CBA8" stroke-width="4" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Lightbox for gallery images -->
+  <div id="lightbox" class="hidden fixed inset-0 z-50 bg-brown-700/90 items-center justify-center p-5 cursor-zoom-out">
+    <button id="lightboxClose" aria-label="Close" class="absolute top-5 right-5 text-cream text-3xl leading-none w-10 h-10 flex items-center justify-center hover:text-sage-300">&times;</button>
+    <img id="lightboxImg" src="" alt="" class="max-w-full max-h-full rounded-2xl shadow-2xl" />
+  </div>
 
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="fade-section py-24 px-5 sm:px-8 bg-cream">

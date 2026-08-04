@@ -39,6 +39,42 @@ if ('IntersectionObserver' in window) {
   fadeSections.forEach((section) => section.classList.add('is-visible'));
 }
 
+// ---- Gallery lightbox ----
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const galleryImages = document.querySelectorAll('[data-lightbox]');
+
+if (lightbox && lightboxImg && galleryImages.length) {
+  const openLightbox = (img) => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    lightboxImg.src = '';
+  };
+
+  galleryImages.forEach((img) => {
+    img.addEventListener('click', () => openLightbox(img));
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  // Click the dark backdrop (not the image itself) to close
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+  });
+}
+
 // ---- Floating event pop-up ----
 const eventPopup = document.getElementById('eventPopup');
 const eventPopupClose = document.getElementById('eventPopupClose');
